@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39d6818d-4286-47f7-bd63-45f1191791a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/meiduo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/.idea/meiduo_1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/meiduo_1/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/meiduo_1/apps/users/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/meiduo_1/apps/users/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/meiduo_1/apps/users/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/meiduo_1/apps/users/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/meiduo_1/apps/users/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/meiduo_1/apps/users/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/meiduo_1/apps/users/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/meiduo_1/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/meiduo_1/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_1/meiduo_1/wsgi.py" afterDir="false" />
-    </list>
+    <list default="true" id="39d6818d-4286-47f7-bd63-45f1191791a5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +15,32 @@
           <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.opened" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gitignore" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
     </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1606" />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,6 +69,11 @@
             <path>
               <item name="meiduo" type="b2602c69:ProjectViewProjectNode" />
               <item name="meiduo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meiduo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meiduo" type="462c0819:PsiDirectoryNode" />
+              <item name="meiduo_1" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -110,9 +114,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="-4" width="644" height="622" extended-state="6" />
+    <frame x="57" y="-4" width="1305" height="619" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="1.0" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.6798419" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -125,8 +129,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32608697" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50039524" side_tool="true" weight="0.32604373" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49960473" visible="true" weight="0.32604373" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -141,5 +145,12 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1606" />
+      </provider>
+    </entry>
   </component>
 </project>
