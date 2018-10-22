@@ -116,7 +116,7 @@
   <component name="ToolWindowManager">
     <frame x="57" y="-4" width="1305" height="619" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.6798419" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.6798419" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -130,7 +130,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50039524" side_tool="true" weight="0.32604373" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49960473" visible="true" weight="0.32604373" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49960473" visible="true" weight="0.32604373" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
