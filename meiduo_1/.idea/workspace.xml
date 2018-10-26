@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e7fe580-12bb-42e9-9faa-1b88b384adb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/meiduo_1/apps/users/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/meiduo_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/meiduo_1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meiduo_1/apps/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/meiduo_1/apps/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meiduo_1/apps/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/meiduo_1/apps/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meiduo_1/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/meiduo_1/apps/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meiduo_1/settings/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/meiduo_1/settings/dev.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/meiduo_1/apps/users/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,12 +91,12 @@
         <counts>
           <entry key="dummy" value="1" />
           <entry key="py" value="4262" />
-          <entry key="txt" value="46" />
+          <entry key="txt" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="47" />
+          <entry key="PLAIN_TEXT" value="53" />
           <entry key="Python" value="4261" />
           <entry key="RegExp" value="1" />
         </counts>
@@ -179,8 +173,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/meiduo_1/apps/users/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="114">
+              <caret line="6" selection-start-line="6" selection-end-line="7" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
                 <marker date="1540553575166" expanded="true" signature="332:337" ph="..." />
@@ -450,7 +444,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540348906201</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="登录接口实现">
+      <created>1540554562718</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1540554562718</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -464,9 +465,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="-4" width="1305" height="619" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="top" id="Redis Servers" order="0" weight="0.32861635" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.07509881" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20474309" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -525,7 +527,8 @@
     <MESSAGE value="基本配置" />
     <MESSAGE value="基本配置001.py" />
     <MESSAGE value="duanxin" />
-    <option name="LAST_COMMIT_MESSAGE" value="duanxin" />
+    <MESSAGE value="登录接口实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录接口实现" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.virtualenvs/django_py3_1.11/lib/python3.5/site-packages/django/db/models/__init__.py">
@@ -840,8 +843,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meiduo_1/apps/users/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="7" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
             <marker date="1540553575166" expanded="true" signature="332:337" ph="..." />
