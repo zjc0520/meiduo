@@ -2,9 +2,15 @@ from rest_framework import serializers
 from django_redis import get_redis_connection
 import re
 from rest_framework_jwt.settings import api_settings
-from .models import User
+
+from celery_tasks.email.tasks import send_verify_email
+from users.models import User, Address
+from . import constants
 
 #创建序列化器类
+from utils import tjws
+
+
 class UserCreateSerializer(serializers.Serializer):
     #定义属性
     token = serializers.CharField(read_only=True)
@@ -109,4 +115,67 @@ class UserDetailSerializer(serializers.ModelSerializer):
         model = User
         fields = ['id', 'username', 'mobile', 'email', 'email_active']
 
+class EmailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model =User
+        fields = ['email']
+    def update(self, instance, validated_data):
+        email = validated_data['email']
+        instance.email = email
+        instance.save()
+        # 生成验证链接
+        verify_url = instance.generate_verify_email_url()
+        # 发送验证邮件
+        send_verify_email.delay(email, verify_url)
+        return instance
 
+
+class EmailActiveSerializer(serializers.Serializer):
+    token = serializers.CharField(max_length=200)
+
+    def validate(self, attrs):
+        #获取加密字符串中
+        token = attrs.get('token')
+        #解密
+        data_dict = tjws.loads(token,constants.VERIFY_EMAIL_TOKEN_EXPIRES)
+        #判断是否过期
+        if data_dict is None:
+            raise serializers.ValidationError("激活链接已经过期")
+        # 将获取到的user_id加入验证后的数据字典中
+        attrs['user_id'] = data_dict.get('user_id')
+
+        return attrs
+# class AddressSerializer(serializers.ModelSerializer):
+#     #关系属性,使用id接收
+#     province_id =
+
+class AddressSerializer(serializers.ModelSerializer):
+    # 关系属性，使用id接收
+    province_id = serializers.IntegerField()
+    city_id = serializers.IntegerField()
+    district_id = serializers.IntegerField()
+    # 关系属性，改成非必须
+    province = serializers.StringRelatedField(read_only=True)
+    city = serializers.StringRelatedField(read_only=True)
+    district = serializers.StringRelatedField(read_only=True)
+    class Meta:
+        model = Address
+        # fields=[]
+        # 指定不需要的属性
+        # 说明：user不需要传递，而是获取当前登录的用户
+        exclude = ['is_delete', 'create_time', 'update_time', 'user']
+
+    # create()
+    def create(self, validated_data):
+        # 判断当前是否达到上限
+        user = self.context['request'].user
+        if user.addresses.filter(is_delete=False).count() >= constants.ADDRESS_LIMIT:
+            raise serializers.ValidationError('已经达到收货地址上限')
+            # 默认实现中，未指定属性user，则添加时必然报错，所以在添加前需要指定user属性
+        validated_data['user'] = user
+        print(validated_data)
+
+        address = super().create(validated_data)
+        # address = Address.objects.create(**validated_data)
+        return address
+            # update()

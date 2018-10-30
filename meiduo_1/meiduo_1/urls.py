@@ -21,4 +21,7 @@ urlpatterns = [
     url('^', include('meiduo_1.apps.users.urls')),
     url('^', include('meiduo_1.apps.verifications.urls')),
     url(r'^oauth/',include('meiduo_1.apps.oauth.urls')),
+    url(r'^',include('meiduo_1.apps.areas.urls')),
+    url(r'^',include('meiduo_1.apps.goods.urls')),
+    url(r'^',include('meiduo_1.apps.contents.urls')),
 ]
