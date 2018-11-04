@@ -21,6 +21,9 @@
       <sourceFolder url="file://$MODULE_DIR$/meiduo_1/apps/areas" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/meiduo_1/apps/users" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/meiduo_1/apps" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/meiduo_1/apps/goods" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/meiduo_1/apps/contents" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/meiduo_1/settings" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.5 (django_py3_1.11)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -29,7 +32,7 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/templates" />
+        <option value="$MODULE_DIR$/meiduo_1/templates" />
       </list>
     </option>
   </component>

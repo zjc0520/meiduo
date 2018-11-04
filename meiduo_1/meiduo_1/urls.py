@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^',include('meiduo_1.apps.areas.urls')),
     url(r'^',include('meiduo_1.apps.goods.urls')),
     url(r'^',include('meiduo_1.apps.contents.urls')),
+    url(r'^ckeditor/',include('ckeditor_uploader.urls'))
 ]

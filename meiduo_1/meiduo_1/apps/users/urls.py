@@ -11,6 +11,7 @@ urlpatterns=[
     url(r'^user/$',views.UserDetailView.as_view()),
     url(r'^emails/$',views.EmailView.as_view()),
     url(r'^emails/verification/$',views.EmailActiveView.as_view()),
+    url(r'^browse_histories/$', views.BrowseHistoryView.as_view()),
 ]
 router = DefaultRouter()
 router.register('addresses', views.AddressViewSet, base_name='addresses')
