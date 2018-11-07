@@ -8,6 +8,7 @@ from oauth.qq_sdk import OAuthQQ
 from utils import tjws
 from oauth.models import OAuthQQUser
 from oauth.serializers import QQBindSerializer
+from carts.utils import merge_cookie_to_redis
 
 #  url(r'^qq/authorization/$', views.QQAuthURLView.as_view()),
 
@@ -48,11 +49,16 @@ class QQloginView(APIView):
             })
         else:
             # 如果存在则状态保持，登录成功
-            return Response({
+            response = Response({
                 "user_id":qquser.user_id,
                 "username":qquser.user.username,
                 "token":generate(qquser.user)
                 })
+            #合并
+            response = merge_cookie_to_redis(request,qquser.user.id,request)
+            #响应
+            return response
+
     def post(self,request):
         #接收
         serializer = QQBindSerializer(data=request.data)
@@ -65,9 +71,14 @@ class QQloginView(APIView):
         # 绑定：在qquser表中创建一条数据
         qquser = serializer.save()
         # 响应：绑定完成，登录成功，状态保持
-        return Response({
+        response =  Response({
          "user_id":qquser.user.id,
             "username":qquser.user.username,
             "token":generate(qquser.user)
         })
+        # 合并
+        response = merge_cookie_to_redis(request, qquser.user.id, response)
+        # 响应
+        return response
+
 

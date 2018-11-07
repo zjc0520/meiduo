@@ -50,10 +50,9 @@ class CartView(APIView):
         serialzier = serializers.CartAddSerializer(data=request.data)
         #验证序列化器
         serialzier.is_valid(raise_exception=True)
-        # 验证通过后获取数据
+        # 验证通过后从请求中获取数据
         sku_id = serialzier.validated_data['sku_id']
         count = serialzier.validated_data['count']
-
         #构建响应对象
         response = Response(serialzier.validated_data)
 
@@ -64,7 +63,7 @@ class CartView(APIView):
             if cart_str is None:
                 cart_dict = {}
             else:
-                cart_dict =myjson.loads(cart_str)
+                cart_dict = myjson.loads(cart_str)
             # #取出原数量
             # if sku_id in cart_dict:
             #     count_cart = cart_dict[sku_id]['count']
@@ -78,6 +77,7 @@ class CartView(APIView):
             #写cookie,字典转字符串
             cart_str = myjson.dumps(cart_dict)
             response.set_cookie('cart',cart_str,max_age=constants.CART_COOKIE_EXPIRES)
+        #     set_cookie(键,值,过期时长)
         else:
             # 如果已登录，则存入redis
             # 连接redis
@@ -89,6 +89,7 @@ class CartView(APIView):
             redis_cli.hset(key,sku_id,count)
             # 将商品编号存入set中，表示选中此商品
             redis_cli.sadd(key_select,sku_id)
+        #     key,key_select都作为键被设置进去
         return response
 
     """查询"""

@@ -5,6 +5,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import View,APIView
 from rest_framework.viewsets import ModelViewSet
+from rest_framework_jwt.views import ObtainJSONWebToken
 
 from goods.models import SKU
 from goods.serializers import SKUSerializer
@@ -16,6 +17,8 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.backends import ModelBackend
 from rest_framework_jwt.utils import jwt_response_payload_handler
 from rest_framework import generics
+from carts.utils import merge_cookie_to_redis
+
 
 class UsernameCountView(APIView):
     """
@@ -176,8 +179,19 @@ class BrowseHistoryView(generics.ListCreateAPIView):
             skus.append(SKU.objects.get(pk=int(sku_id)))
         return skus  # [sku,sku,sku,...]
 
+"""重写登录视图,用于登录后购物车合并"""
 
-
+class LoginView(ObtainJSONWebToken):
+    def post(self,request,*args, **kwargs):
+        response = super().post(request,*args, **kwargs)
+        # 登录逻辑还是使用jwt中的视图实现，此处在登录后添加自己的逻辑
+        # 判断是否登录成功
+        if response.status_code == 200:
+            #获取用户编号
+            user_id = response.data.get('user_id')
+            #当前添加逻辑,合并购物车
+            response = merge_cookie_to_redis(request, user_id, response)
+        return response
 
 
 
